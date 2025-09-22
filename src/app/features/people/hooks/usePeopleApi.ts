@@ -17,7 +17,7 @@ import PersonWithHomeworld from '../types/PersonWithHomeworld';
 // This approach is acceptable here due to the limited dataset size (83 people/60 planets)
 // and no API support for batch fetching related resources, pagination, filtering, or sorting.
 
-type PlanetMap = Record<string, Planet>;
+export type PlanetMap = Record<string, Planet>;
 
 const usePeopleApi = () => {
   const [people, setPeople] = useState<PersonWithHomeworld[]>([]);

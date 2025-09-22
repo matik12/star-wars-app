@@ -12,8 +12,9 @@ const Modal = ({ children, title, onClose }: ModalProps) => (
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-yellow-400">{title}</h2>
         <button
-          onClick={onClose}
           className="text-gray-400 hover:text-white text-2xl"
+          data-testid="close-icon"
+          onClick={onClose}
         >
           &times;
         </button>

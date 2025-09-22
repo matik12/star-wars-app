@@ -18,10 +18,13 @@ const Table = <T extends { [key: string]: unknown }>({
 }: TableProps<T>) => (
   <div className="overflow-x-auto">
     <table className="min-w-full divide-y divide-gray-700">
-      <thead className="bg-gray-800">
+      <thead className="bg-gray-800" data-testid="table-header">
         <tr>{headerCells}</tr>
       </thead>
-      <tbody className="bg-gray-900 divide-y divide-gray-700">
+      <tbody
+        className="bg-gray-900 divide-y divide-gray-700"
+        data-testid="table-body"
+      >
         {items.map((item: T) => (
           <tr
             key={item[rowKey] as string}
